@@ -76,32 +76,34 @@ export default function ChatSection({ curr, onShow, theme, onHide }) {
                 </div>
             </div>
         </div>
-        <div id="rightBottom" className="relative w-full h-[62px] block z-20">
-            <div className="min-h-[62px] max-w-full flex flex-row align-end relative px-[16px] pt-[2px] pb-[8px] bg-[#f0f2f5] dark:bg-[#202c33] border-l border-solid border-[#e9edef] dark:border-[rgba(134,150,160,0.15)]">
-                <div className="relative flex align-end grow shrink basis-0 w-full min-h-[52px]">
-                    <div className="py-[5px] flex items-center justify-center min-h-[52px] text-[#54656f] dark:text-[#8696a0] rounded-full">
-                        <div role="button" className="mx-[1px] my-[1px] relative flex items-center justify-center w-[42px] h-[42px] rounded-full hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-[#384147]">
-                            <div className="absolute top-[8px] bottom-[8px] w-[26px]"><svg viewBox="0 0 24 24" height="26" width="26" preserveAspectRatio="xMidYMid meet" className="ekdr8vow dhq51u3o" version="1.1" x="0px" y="0px" enableBackground="new 0 0 24 24"><title>smiley</title><path fill="currentColor" d="M9.153,11.603c0.795,0,1.439-0.879,1.439-1.962S9.948,7.679,9.153,7.679 S7.714,8.558,7.714,9.641S8.358,11.603,9.153,11.603z M5.949,12.965c-0.026-0.307-0.131,5.218,6.063,5.551 c6.066-0.25,6.066-5.551,6.066-5.551C12,14.381,5.949,12.965,5.949,12.965z M17.312,14.073c0,0-0.669,1.959-5.051,1.959 c-3.505,0-5.388-1.164-5.607-1.959C6.654,14.073,12.566,15.128,17.312,14.073z M11.804,1.011c-6.195,0-10.826,5.022-10.826,11.217 s4.826,10.761,11.021,10.761S23.02,18.423,23.02,12.228C23.021,6.033,17.999,1.011,11.804,1.011z M12,21.354 c-5.273,0-9.381-3.886-9.381-9.159s3.942-9.548,9.215-9.548s9.548,4.275,9.548,9.548C21.381,17.467,17.273,21.354,12,21.354z  M15.108,11.603c0.795,0,1.439-0.879,1.439-1.962s-0.644-1.962-1.439-1.962s-1.439,0.879-1.439,1.962S14.313,11.603,15.108,11.603z"></path></svg></div>
-                        </div>
-                        <div role="button" className="flex items-center rounded-full relative w-[42px] h-[42px] hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-[#384147]">
-                            <div className="p-[9px] flex items-center"><svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" className="" fill="none"><title>attach-menu-plus</title><path fillRule="evenodd" clipRule="evenodd" d="M20.5 13.2501L20.5 10.7501L13.25 10.7501L13.25 3.5L10.75 3.5L10.75 10.7501L3.5 10.7501L3.5 13.2501L10.75 13.2501L10.75 20.5L13.25 20.5L13.25 13.2501L20.5 13.2501Z" fill="currentColor"></path></svg></div>
+        <div id="rightBottom" className="relative w-full h-[62px] block z-20 flex">
+            <div className="h-[48px] w-[calc(100%-70px)] flex flex-row align-end rounded-full relative my-[7px] mx-[4px] px-[8px] py-[2px] bg-[#f0f2f5] dark:bg-[#202c33] border-l border-solid border-[#e9edef] dark:border-[rgba(134,150,160,0.15)]">
+                <div className="relative flex align-end grow shrink basis-0 w-full h-[45px]">
+                    <div className="py-[2px] flex items-center justify-center text-[#54656f] dark:text-[#8696a0] rounded-full">
+                        <div role="button" className="mx-[1px] my-[1px] relative flex items-center justify-center w-[40px] h-[40px] rounded-full hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-[#384147]">
+                            <div className="absolute top-[6px] left-[2.5px] w-[26px]"><svg viewBox="0 0 24 24" height="26" width="26" preserveAspectRatio="xMidYMid meet" className="ekdr8vow dhq51u3o" version="1.1" x="0px" y="0px" enableBackground="new 0 0 24 24"><title>smiley</title><path fill="currentColor" d="M9.153,11.603c0.795,0,1.439-0.879,1.439-1.962S9.948,7.679,9.153,7.679 S7.714,8.558,7.714,9.641S8.358,11.603,9.153,11.603z M5.949,12.965c-0.026-0.307-0.131,5.218,6.063,5.551 c6.066-0.25,6.066-5.551,6.066-5.551C12,14.381,5.949,12.965,5.949,12.965z M17.312,14.073c0,0-0.669,1.959-5.051,1.959 c-3.505,0-5.388-1.164-5.607-1.959C6.654,14.073,12.566,15.128,17.312,14.073z M11.804,1.011c-6.195,0-10.826,5.022-10.826,11.217 s4.826,10.761,11.021,10.761S23.02,18.423,23.02,12.228C23.021,6.033,17.999,1.011,11.804,1.011z M12,21.354 c-5.273,0-9.381-3.886-9.381-9.159s3.942-9.548,9.215-9.548s9.548,4.275,9.548,9.548C21.381,17.467,17.273,21.354,12,21.354z  M15.108,11.603c0.795,0,1.439-0.879,1.439-1.962s-0.644-1.962-1.439-1.962s-1.439,0.879-1.439,1.962S14.313,11.603,15.108,11.603z"></path></svg></div>
                         </div>
                     </div>
                     <div className="flex grow shrink basis-0 flex-end min-w-0">
-                        <div className="flex grow shrink basis-auto px-[12px] py-[9px] m-[8px] bg-white dark:bg-[#2a3942] border border-solid border-white dark:border-[#2a3942] rounded-[8px] min-h-[20px] text-[15px] font-normal leading-[20px] outline-0">
+                        <div className="flex grow shrink basis-auto px-[12px] py-[9px] m-[8px] rounded-[8px] min-h-[20px] text-[15px] font-normal leading-[20px] outline-0">
                             <div className="relative w-full">
                                 <div role="textbox" contentEditable="false" spellCheck="true" className=" cursor-text relative max-h-[7.35em] min-h-[1.47em] text-[#667781] dark:text-[#8696a0] whitespace-prewrap break-word leading-[1.47em] overflow-x-hidden overflow-y-auto text-[0.9375rem] focus:bg-white dark:focus:bg-[#2a3942] focus:outline-0 z-30">
                                     {/* */}
                                 </div>
-                                <div className="absolute top-0 left-[0.5ch] text-[#667781] dark:text-[#8696a0] leading-[1.47em] bottom-0 text-[0.9375rem] z-10">Type a message</div>
-                            </div>
-                        </div>
-                        <div className="py-[5px] w-[40px] min-w-[40px] flex items-center justify-center min-h-[52px]">
-                            <div role="button" className="w-[40px] h-[40px] flex items-center justify-center text-[#54656f] dark:text-[#8696a0] cursor-pointer hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-[#384147] rounded-full">
-                            <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" className="" version="1.1" x="0px" y="0px" enableBackground="new 0 0 24 24"><title>ptt</title><path fill="currentColor" d="M11.999,14.942c2.001,0,3.531-1.53,3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531 S8.469,2.35,8.469,4.35v7.061C8.469,13.412,9.999,14.942,11.999,14.942z M18.237,11.412c0,3.531-2.942,6.002-6.237,6.002 s-6.237-2.471-6.237-6.002H3.761c0,4.001,3.178,7.297,7.061,7.885v3.884h2.354v-3.884c3.884-0.588,7.061-3.884,7.061-7.885 L18.237,11.412z"></path></svg>
+                                <div className="absolute -top-[7.5px] -ml-[10px] text-[#667781] dark:text-[#8696a0] leading-[1.47em] text-[1.1rem] z-10">Message</div>
                             </div>
                         </div>
                     </div>
+                    <div className="py-[2px] flex items-center justify-center text-[#54656f] dark:text-[#8696a0] rounded-full">
+                        <div role="button" className="-mr-[0.5px] flex items-center rounded-full relative w-[40px] h-[40px] hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-[#384147]">
+                            <div className="p-[9px] flex items-center"><svg viewBox="0 0 24 24" height="26" width="26" preserveAspectRatio="xMidYMid meet" className="" fill="none"><title>attach-menu-plus</title><path fillRule="evenodd" clipRule="evenodd" d="M20.5 13.2501L20.5 10.7501L13.25 10.7501L13.25 3.5L10.75 3.5L10.75 10.7501L3.5 10.7501L3.5 13.2501L10.75 13.2501L10.75 20.5L13.25 20.5L13.25 13.2501L20.5 13.2501Z" fill="currentColor"></path></svg></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="mx-[4px] w-[48px] flex items-center justify-center h-[48px] my-[7px] rounded-full cursor-pointer bg-[#028069]">
+                <div role="button" className="w-[45px] h-[45px] flex items-center justify-center text-[#ffffff] cursor-pointer rounded-full">
+                    <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" className="" version="1.1" x="0px" y="0px" enableBackground="new 0 0 24 24"><title>ptt</title><path fill="currentColor" d="M11.999,14.942c2.001,0,3.531-1.53,3.531-3.531V4.35c0-2.001-1.53-3.531-3.531-3.531 S8.469,2.35,8.469,4.35v7.061C8.469,13.412,9.999,14.942,11.999,14.942z M18.237,11.412c0,3.531-2.942,6.002-6.237,6.002 s-6.237-2.471-6.237-6.002H3.761c0,4.001,3.178,7.297,7.061,7.885v3.884h2.354v-3.884c3.884-0.588,7.061-3.884,7.061-7.885 L18.237,11.412z"></path></svg>
                 </div>
             </div>
         </div>

@@ -64,7 +64,7 @@ export default function SentMessage({ text, time, read, first, last, theme }) {
   return (
     <div role='row'>
         <div className={`relative ${last ? "mb-[12px]" : "mb-[2px]"}`}>
-            <div className={`flex flex-col items-end ${screenWidth>968 ? "px-[63px]" : "pr-[20px] pl-[25px]"} `}>
+            <div className={`flex flex-col items-end ${screenWidth>968 ? "px-[63px]" : "pr-[10px] pl-[25px]"} `}>
                 <div className='relative rounded-[13.5px] grow-0 shrink-0 basis-auto text-[14.2px] leading-[19px] text-[#111b21] dark:text-[#e9edef] w-auto' style={{ maxWidth: `${currentWidth}%` }}>
                     {first && <div className='absolute -right-[6px] text-[#d9fdd3] dark:text-[#005c4b] top-0 block w-[8px] h-[13px]'><svg viewBox="0 0 8 13" height="13" width="8" preserveAspectRatio="xMidYMid meet" className="" version="1.1" x="0px" y="0px" enableBackground="new 0 0 8 13"><title>tail-out</title><path opacity="0.13" d="M5.188,1H0v11.193l6.467-8.625 C7.526,2.156,6.958,1,5.188,1z"></path><path fill="currentColor" d="M5.188,0H0v11.193l6.467-8.625C7.526,1.156,6.958,0,5.188,0z"></path></svg></div>}
                     <div className='relative rounded-[13.5px] bg-[#d9fdd3] dark:bg-[#005c4b] ' style={{ borderTopRightRadius: first ? '0' : '13.5px', boxShadow: '0 1px 0.5px rgba(11,20,26,.13)' }}>
