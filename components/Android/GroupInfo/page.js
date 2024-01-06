@@ -13,14 +13,14 @@ export default function GroupInfo({ onHide, anim, curr, theme }) {
 
   return (
     <div className='absolute left-0 top-0 w-full h-full bg-[#f0f2f5] dark:bg-[#0c1317] flex flex-col overflow-hidden'>
-        <div className='pr-[20px] pl-[25px] text-[#d1d7db] flex items-center bg-[#f0f2f5] dark:bg-[#202c33] h-[59px] grow-0 shrink-0 basis-auto'>
-            <div className='p-0 text-[#3b4a54] dark:text-[#e9edef] flex font-normal w-full items-center grow-0 shrink-0 basis-auto'>
+        <div className='pr-[20px] pl-[25px] text-[#d1d7db] flex items-center bg-[#00a683] dark:bg-[#202c33] h-[59px] grow-0 shrink-0 basis-auto'>
+            <div className='p-0 text-[#ffffff] dark:text-[#e9edef] flex font-normal w-full items-center grow-0 shrink-0 basis-auto'>
                 <div className='w-[54px] grow-0 shrink-0 basis-auto'>
-                    <div role='button' className='cursor-pointer text-[#54656f] dark:text-[#8696a0] w-fit align-top' onClick={onHide}>
+                    <div role='button' className='cursor-pointer text-[#ffffff] dark:text-[#8696a0] w-fit align-top' onClick={onHide}>
                         <span><svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" className="" fill="currentColor" enableBackground="new 0 0 24 24"><title>x</title><path d="M19.6004 17.2L14.3004 11.9L19.6004 6.60005L17.8004 4.80005L12.5004 10.2L7.20039 4.90005L5.40039 6.60005L10.7004 11.9L5.40039 17.2L7.20039 19L12.5004 13.7L17.8004 19L19.6004 17.2Z"></path></svg></span>
                     </div>
                 </div>
-                <div className='leading-normal overflow-hidden -mt-[1px] grow break-words text-[1rem] max-h-[46px] '>
+                <div className='leading-normal overflow-hidden font-medium -mt-[1px] grow break-words text-[1.2rem] max-h-[46px] '>
                     <h1>Group Info</h1>
                 </div>
             </div>
@@ -32,8 +32,8 @@ export default function GroupInfo({ onHide, anim, curr, theme }) {
                         <div className='flex min-h-0 min-w-0 items-center justify-start flex-col flex-nowrap'>
                             <div className='mb-[7px]'>
                                 <div className='mx-auto relative cursor-pointer w-[200px] h-[200px]'>
-                                    <div className='cursor-pointer mx-auto bg-no-repeat bg-contain rounded-full relative w-full h-full bg-center overflow-hidden bg-[#008069] dark:bg-[#2d383f]'>
-                                        <Image src={`/group-icons${Chat.img}`} width={120} height={120} className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2' />
+                                    <div className='cursor-pointer mx-auto bg-no-repeat bg-contain rounded-full relative w-full h-full bg-center overflow-hidden bg-[#00a683] dark:bg-[#2d383f]'>
+                                        <Image src={`/group-icons${Chat.img}`} width={120} height={120} className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2' style={{ filter: 'brightness(0) invert(1)' }} />
                                     </div>
                                 </div>
                             </div>
