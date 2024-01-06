@@ -41,11 +41,6 @@ export default function ChatGroup({ name, datetime, text, img, mute, onClick, se
                     </div>
                     <div className="flex flex-row ml-[6px] max-w-full text-[12px] leading-[20px] text-[#8596a1] dark:text-[#8696a0]">
                         {mute && <span><svg viewBox="0 0 16 18" height="18" width="16" preserveAspectRatio="xMidYMid meet" className="" version="1.1" x="0px" y="0px" enableBackground="new 0 0 16 18"><title>muted</title><path fill="currentColor" d="M11.52,9.206c0-1.4-0.778-2.567-1.944-3.111v1.711L11.52,9.75 C11.52,9.517,11.52,9.362,11.52,9.206z M13.465,9.206c0,0.7-0.156,1.4-0.389,2.022l1.167,1.167c0.544-0.933,0.778-2.1,0.778-3.267 c0-3.344-2.333-6.144-5.444-6.844v1.633C11.832,4.695,13.465,6.717,13.465,9.206z M2.032,2.206L1.02,3.217l3.656,3.656H1.02v4.667 h3.111l3.889,3.889v-5.211l3.344,3.344c-0.544,0.389-1.089,0.7-1.789,0.933v1.633c1.089-0.233,2.022-0.7,2.878-1.4l1.556,1.556 l1.011-1.011l-7-7L2.032,2.206z M8.02,2.984L6.387,4.617L8.02,6.25V2.984z"></path></svg></span>}
-                        <span className="hidden group-hover:inline-block">
-                            <button className="w-[20px] ml-[4px] h-[20px] align-top inline-block text-[#8596a1] dark:text-[#8696a0]">
-                                <span><svg viewBox="0 0 19 20" height="20" width="19" preserveAspectRatio="xMidYMid meet" className="" version="1.1" x="0px" y="0px"><title>down</title><path fill="currentColor" d="M3.8,6.7l5.7,5.7l5.7-5.7l1.6,1.6l-7.3,7.2L2.2,8.3L3.8,6.7z"></path></svg></span>
-                            </button>
-                        </span>
                     </div>
                 </div>
             </div>

@@ -56,7 +56,7 @@ export default function ChatSection({ curr, onShow, theme, onHide }) {
         <div id="rightMid" className="relative grow shrink basis-0 z-20">
             <div className={`absolute top-0 left-0 border-l border-solid border-[rgba(233,237,239,0.12)] w-full h-full flex flex-col-reverse overflow-x-hidden overflow-y-scroll ${theme}`}>
                 <div className="grow shrink basis-auto min-h-[12px]"></div>
-                <div className="pl-0 py-[16px] pb-[8px] grow shrink basis-0">
+                <div className="pl-0 pt-[16px] -mb-[8px] grow shrink basis-0">
                     {Chat.messages.map((message,i,array,count=0)=>{
                         count++;
                         if(count!=1) i++;
