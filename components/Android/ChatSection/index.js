@@ -24,7 +24,7 @@ export default function ChatSection({ curr, onShow, theme, onHide }) {
   return (
     <div className="flex flex-col w-full h-[100dvh] bg-[#efeae2] dark:bg-[#0b141a]">
         <div className="absolute w-full h-full top-0 left-0 bg-repeat opacity-40 dark:opacity-[.06] z-10" style={{ backgroundImage: theme=="dark" ? "url('/chat-bg-dark.png')" : "url('/chat-bg-light.png')" }}></div>
-        <div id="rightTop" className="relative flex items-center h-[59px] w-full py-[10px] px-[16px] bg-[#00a683] dark:bg-[#202c33] z-20 border-l border-solid border-[#d1d7db] dark:border-[rgba(134,150,160,0.15)]" style={{ boxShadow:  theme=="dark" ? "0 1px 3px rgba(11,20,26,.4)" : "" }}>
+        <div id="rightTop" className="relative flex items-center h-[59px] w-full py-[10px] px-[16px] bg-[#00a683] dark:bg-[#202c33] z-20" style={{ boxShadow:  theme=="dark" ? "0 1px 3px rgba(11,20,26,.4)" : "" }}>
             <div className="pr-[15px] -mt-[1px] flex text-[#ffffff] dark:text-[#aebac1]" onClick={onHide}>
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="-mr-[9.5px] pr-0 my-auto -ml-[10px]" viewBox="0 0 16 16"><path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/></svg>
                 <div className="w-[40px] h-[40px] rounded-full relative cursor-pointer bg-transparent border-2 border-solid border-[#00a683] dark:border-[#202c33]">
@@ -54,7 +54,7 @@ export default function ChatSection({ curr, onShow, theme, onHide }) {
         </div>
         <span className="w-full border-b border-solid border-[#e9edef] dark:border-[rgba(134,150,160,0.15)]"></span>
         <div id="rightMid" className="relative grow shrink basis-0 z-20">
-            <div className={`absolute top-0 left-0 border-l border-solid border-[rgba(233,237,239,0.12)] w-full h-full flex flex-col-reverse overflow-x-hidden overflow-y-scroll ${theme}`}>
+            <div className={`absolute top-0 left-0 w-full h-full flex flex-col-reverse overflow-x-hidden overflow-y-scroll ${theme}`}>
                 <div className="grow shrink basis-auto min-h-[12px]"></div>
                 <div className="pl-0 pt-[16px] -mb-[8px] grow shrink basis-0">
                     {Chat.messages.map((message,i,array,count=0)=>{
@@ -77,7 +77,7 @@ export default function ChatSection({ curr, onShow, theme, onHide }) {
             </div>
         </div>
         <div id="rightBottom" className="relative w-full h-[62px] block z-20 flex">
-            <div className="h-[48px] w-[calc(100%-70px)] flex flex-row align-end rounded-full relative my-[7px] mx-[4px] px-[8px] py-[2px] bg-[#ffffff] dark:bg-[#202c33] border-l border-solid border-[#e9edef] dark:border-[rgba(134,150,160,0.15)]">
+            <div className="h-[48px] w-[calc(100%-70px)] flex flex-row align-end rounded-full relative my-[7px] mx-[4px] px-[8px] py-[2px] bg-[#ffffff] dark:bg-[#202c33]">
                 <div className="relative flex align-end grow shrink basis-0 w-full h-[45px]">
                     <div className="py-[2px] flex items-center justify-center text-[#54656f] dark:text-[#8696a0] rounded-full">
                         <div role="button" className="mx-[1px] my-[1px] relative flex items-center justify-center w-[40px] h-[40px] rounded-full hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-[#384147]">
