@@ -1,5 +1,6 @@
 "use client"
 import Android from './@Android/page';
+import IOS from './@IOS/page';
 import Desktop from './@Desktop/page'
 import { useEffect, useState } from 'react'
 import { isMobile, osName } from 'react-device-detect';
@@ -30,7 +31,7 @@ export default function Home() {
     <Android />
   )
   else if(os=="iOS") return(
-    <Android />
+    <IOS />
     // <p>Hey there iPhone!</p>
   )
 }

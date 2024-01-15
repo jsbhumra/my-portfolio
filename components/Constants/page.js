@@ -240,7 +240,7 @@ const Constants = {
         name: "Socials",
         datetime: ";)",
         text: ":)",
-        img: '/logo-whatsapp.svg',
+        img: '/logo-whatsup.svg',
         members: ["Github", "LinkedIn", "Twitter(X)"],
         membersText: "GitHub, LinkedIn, Twitter(X)",
         muted: false,

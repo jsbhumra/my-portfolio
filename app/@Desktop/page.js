@@ -100,7 +100,7 @@ export default function Desktop() {
         window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
       console.log("first")
-      theme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
+      currentTheme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
       return;
     }
 
@@ -108,7 +108,7 @@ export default function Desktop() {
 
     await document.startViewTransition(() => {
       flushSync(() => {
-        theme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
+        currentTheme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
       });
     }).ready;
 

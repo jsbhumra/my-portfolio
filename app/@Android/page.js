@@ -3,7 +3,6 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useTheme } from "next-themes";
 import Constants from '@/components/Constants/page';
 import SwipeableViews from 'react-swipeable-views';
-import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Image from 'next/image';
@@ -65,7 +64,7 @@ export default function Android() {
         window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
       console.log("first")
-      theme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
+      currentTheme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
       return;
     }
 
@@ -73,7 +72,7 @@ export default function Android() {
 
     await document.startViewTransition(() => {
       flushSync(() => {
-        theme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
+        currentTheme=="dark" ? setIsDarkMode(false) : setIsDarkMode(true);
       });
     }).ready;
 
