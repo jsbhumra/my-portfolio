@@ -26,7 +26,7 @@ export default function Profile({ onHide, anim }) {
             </div>
         </div> */}
         <div className='flex basis-0 grow overflow-x-hidden overflow-y-auto relative flex-col h-max'>
-            <motion.div animate={{ scale: [0, 0, 1] }} transition={{ times: [0, 0.2, 1], duration: 0.5, ease: "easeInOut" }} className='grow-0 shrink-0 origin-center flex basis-auto my-[28px] justify-center z-[250]'>
+            <motion.div animate={{ scale: [0, 0, 1] }} transition={{ times: [0, 0.2, 1], duration: 0.5, ease: "easeInOut" }} className='grow-0 shrink-0 origin-center flex basis-auto mb-[28px] justify-center z-[250]'>
                 <div className='relative mx-auto w-[200px] h-[200px] cursor-pointer'>
                     <div className='mx-auto relative cursor-pointer h-full w-full overflow-hidden bg-no-repeat bg-center bg-contain rounded-full'>
                         <div className='absolute left-0 top-0 w-full h-full rounded-full'>
