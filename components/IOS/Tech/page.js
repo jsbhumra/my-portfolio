@@ -28,7 +28,7 @@ export default function Tech({ onHide }) {
       }
 
   return (
-    <div className='absolute h-full w-full left-0 right-0 top-5 bottom-0 pointer-events-auto'>
+    <div className='absolute h-full w-full left-0 right-0 top-[45px] bottom-0 pointer-events-auto'>
         {/* <div className='pl-[23px] pr-[20px] flex justify-end bg-[#008069] dark:bg-[#202c33] h-[108px] flex-col text-white dark:text-[#d9dee0] grow-0 shrink-0 basis-auto'>
             <div className='p-0 bg-transparent flex h-[59px] w-full items-center grow-0 shrink-0 basis-auto'>
                 <div className='w-[60px] grow-0 shrink-0 basis-auto'>

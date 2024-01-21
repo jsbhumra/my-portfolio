@@ -11,8 +11,8 @@ import Tech from '@/components/IOS/Tech/page';
 import Profile from '@/components/IOS/Profile/page';
 import LandingSection from '@/components/IOS/LandingSection';
 import { useRouter } from 'next/navigation';
-import ChatSection from '@/components/Android/ChatSection';
-import GroupInfo from '@/components/Android/GroupInfo/page';
+import ChatSection from '@/components/IOS/ChatSection';
+import GroupInfo from '@/components/IOS/GroupInfo/page';
 import { flushSync } from 'react-dom';
 
 const Chats = Constants.Chats
@@ -26,9 +26,10 @@ export default function IOS() {
   const [isDarkMode, setIsDarkMode] = useState();
   const ref = useRef(null);
 
-  const [value, setValue] = useState(2);
+  const [value, setValue] = useState(1);
   const [currChat, setCurrChat] = useState()
   const [infoOpen, setInfoOpen] = useState(false)
+
 
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -132,31 +133,41 @@ export default function IOS() {
 
   return (
     <div className='w-full h-[100dvh] overflow-hidden bg-[#ffffff] dark:bg-[#000000]'>
-        <div id="topHeader" className='-mb-[15px] w-full h-[59px] bg-[#ffffff] dark:bg-[#000000] flex justify-end items-center pl-[20px] py-0 mt-0 text-[#34B7F1]'>
-          {value==1 && <Image src='/jagjit.png' className="absolute left-[20px] rounded-full mt-[2.5px]" width={50} height={50} />}
+      {currChat ? 
+      infoOpen ? 
+        <GroupInfo onHide={()=>{setInfoOpen(false)}} anim={infoOpen} curr={currChat} theme={currentTheme} />
+      :
+      <div id='right' className='relative w-full h-full overflow-hidden grow origin-top-left'>
+        <ChatSection curr={currChat} onHide={()=>{setCurrChat()}} onShow={()=>{setInfoOpen(true)}} theme={currentTheme} />
+      </div> :
+      <div className='w-full h-[100dvh] bg-transparent flex flex-col'>
+        {/* <div className='grow-0'> */}
+        <div id="topHeader" className='-mb-[7.5px] w-full h-[59px] bg-[#ffffff] dark:bg-[#000000] flex justify-between items-center pl-[15px] py-0 mt-0 text-[#34B7F1]'>
+          {value==1 && <Image src='/jagjit.png' className="z-[120] absolute left-[15px] rounded-full mt-[2.5px]" width={50} height={50} />}
+                <span className='rounded-full h-[40px] w-[40px] relative'><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" className="absolute top-[5px] left-[5px]" viewBox="0 0 512 512"><circle fill='currentColor' cx="256" cy="256" r="26"/><circle fill='currentColor' cx="346" cy="256" r="26"/><circle fill='currentColor' cx="166" cy="256" r="26"/><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="32"/></svg></span>
             <div className='flex justify-end gap-x-[10px] items-center pr-[15px]'>
-                <span className='rounded-full h-[40px] w-[40px] relative'><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" className="absolute top-[5px] left-[5px]" viewBox="0 0 512 512"><path d="M350.54 148.68l-26.62-42.06C318.31 100.08 310.62 96 302 96h-92c-8.62 0-16.31 4.08-21.92 10.62l-26.62 42.06C155.85 155.23 148.62 160 140 160H80a32 32 0 00-32 32v192a32 32 0 0032 32h352a32 32 0 0032-32V192a32 32 0 00-32-32h-59c-8.65 0-16.85-4.77-22.46-11.32z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLineJoin="round" strokeWidth="32"/><circle cx="256" cy="272" r="80" fill="none" stroke="currentColor" strokeMiterLimit="10" strokeWidth="32"/><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLineJoin="round" strokeWidth="32" d="M124 158v-22h-24v22"/></svg></span>
-                <span className='rounded-full h-[40px] w-[40px] relative'><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" className="absolute top-[5px] left-[5px]" viewBox="0 0 512 512"><circle fill='currentColor' cx="256" cy="256" r="26"/><circle fill='currentColor' cx="346" cy="256" r="26"/><circle fill='currentColor' cx="166" cy="256" r="26"/><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" strokeMiterLimit="10" strokeWidth="32"/></svg></span>
+                <span className='rounded-full h-[40px] w-[40px] relative'><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" className="absolute top-[5px] left-[5px]" viewBox="0 0 512 512"><path d="M350.54 148.68l-26.62-42.06C318.31 100.08 310.62 96 302 96h-92c-8.62 0-16.31 4.08-21.92 10.62l-26.62 42.06C155.85 155.23 148.62 160 140 160H80a32 32 0 00-32 32v192a32 32 0 0032 32h352a32 32 0 0032-32V192a32 32 0 00-32-32h-59c-8.65 0-16.85-4.77-22.46-11.32z" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/><circle cx="256" cy="272" r="80" fill="none" stroke="currentColor" strokeMiterlimit="10" strokeWidth="32"/><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M124 158v-22h-24v22"/></svg></span>
                 <span className='rounded-full h-[40px] w-[40px] relative'><svg xmlns="http://www.w3.org/2000/svg" height="30" width="30" className="absolute top-[5px] left-[5px]" viewBox="0 0 512 512" fill='currentColor'><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z"/></svg></span>
             </div>
         </div>
-        {value!=1 ? <div className='pl-[17.5px] h-[45px] min-w-1/4 text-left text-[32.5px] text-black dark:text-white tracking-wide font-[550]'>{{0: "Updates", 2: "Chats", 3: "Profile"}[value]}</div> : null}
           {/* {value!=0 ? <div className='min-w-1/4 text-left text-[25px] text-[#dadee0] tracking-wider pl-[5px]'>WhatsUp!</div> : <svg xmlns="http://www.w3.org/2000/svg" fill="#d0d4d6" className="h-[30px] w-[30px] -ml-[1.5px]" viewBox="0 0 512 512"><path d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z" fill-rule="evenodd"/></svg>} */}
         <SwipeableViews
           id='mainBody'
           axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
           index={value}
           onChangeIndex={handleChangeIndex}
-          className='w-full'
-        >
+          className='w-full h-[calc(100dvh-100px)]'
+          >
             {/* <TabPanel value={value} index={0} dir={theme.direction} ></TabPanel> */}
-          <TabPanel className='w-full h-[calc(100dvh-147px)] relative' value={value} index={0} dir={theme.direction}>
+          <TabPanel className='w-full h-[calc(100dvh-100px)] relative' value={value} index={0} dir={theme.direction}>
+          <div className='pl-[17.5px] h-[45px] min-w-1/4 text-left text-[35px] text-black dark:text-white tracking-[1px] font-[600]'>Updates</div>
           <Tech />
           </TabPanel>
-          <TabPanel className='w-full h-[calc(100dvh-147px)] relative' value={value} index={1} dir={theme.direction}>
+          <TabPanel className='w-full h-[calc(100dvh-100px)] relative' value={value} index={1} dir={theme.direction}>
             <LandingSection theme={currentTheme} />
           </TabPanel>
-          <TabPanel className='w-full h-[calc(100dvh-147px)]' value={value} index={2} dir={theme.direction}>
+          <TabPanel className='w-full h-[calc(100dvh-100px)]' value={value} index={2} dir={theme.direction}>
+          <div className='pl-[17.5px] h-[45px] min-w-1/4 text-left text-[35px] text-black dark:text-white tracking-[1px] font-[600]'>Chats</div>
             {Chats.map((el)=>{
               var lastMess, messFrom;
               if(el.messages.length!=0) {
@@ -171,10 +182,12 @@ export default function IOS() {
               return <ChatGroup key={el.id} name={el.name} datetime={el.datetime} text={ messFrom+lastMess } /*text={el.text}*/ img={el.img} mute={el.muted} onClick={()=>{setCurrChat(el.id);}} selected={currChat==el.id} theme={currentTheme} />
             })}
           </TabPanel>
-          <TabPanel className='w-full h-[calc(100dvh-147px)]' value={value} index={3} dir={theme.direction}>
+          <TabPanel className='w-full h-[calc(100dvh-100px)]' value={value} index={3} dir={theme.direction}>
+          <div className='pl-[17.5px] h-[45px] min-w-1/4 text-left text-[35px] text-black dark:text-white tracking-[1px] font-[600]'>Profile</div>
             <Profile />
           </TabPanel>
         </SwipeableViews>
+        {/* </div> */}
         <Tabs id="sliderTabs"
             value={value}
             onChange={handleChange}
@@ -207,6 +220,7 @@ export default function IOS() {
             : <svg fill='currentColor' width="40" height="24" xmlns="http://www.w3.org/2000/svg" className="ionicon m-0 p-0" viewBox="0 0 450 450"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm-50.22 116.82C218.45 151.39 236.28 144 256 144s37.39 7.44 50.11 20.94c12.89 13.68 19.16 32.06 17.68 51.82C320.83 256 290.43 288 256 288s-64.89-32-67.79-71.25c-1.47-19.92 4.79-38.36 17.57-51.93zM256 432a175.49 175.49 0 01-126-53.22 122.91 122.91 0 0135.14-33.44C190.63 329 222.89 320 256 320s65.37 9 90.83 25.34A122.87 122.87 0 01382 378.78 175.45 175.45 0 01256 432z"/></svg> }
             label="&nbsp;Profile" value={3} sx={{ padding: 0, margin: 0, minHeight: '50px', maxHeight: '50px', minWidth: '20%', maxWidth: '20%', color: currentTheme=="dark" ? '#6b7175' : "#6b7175", fontWeight: 500, fontSize: '10px', textTransform: 'capitalize', lineHeight: '5px', letterSpacing: '0.5px' }} />
         </Tabs>
+        </div>}
     </div>
   )
 }
