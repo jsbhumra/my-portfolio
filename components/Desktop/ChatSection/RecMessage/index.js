@@ -82,7 +82,7 @@ export default function RecMessage({ text, time, from, nameColor, first, last, t
                     </div>}
                     <div>
                       <div className='relative break-word whitespace-pre-wrap'>
-                        <span className='min-h-0'>{text}</span>
+                        <span className='min-h-0' dangerouslySetInnerHTML={{ __html: text }}></span>
                         <span className='px-[4px] py-0 text-[0.6875rem] align-middle invisible inline-flex leading-[15px] h-0'>
                           <span className='grow-0 shrink-0'>{time}</span>
                         </span>

@@ -71,7 +71,7 @@ export default function SentMessage({ text, time, read, first, last, theme }) {
                         <div className='pl-[9px] pr-[7px] pt-[6px] pb-[8px]'>
                             <div>
                                 <div className='relative break-word whitespace-pre-wrap'>
-                                    <span className='min-h-0'>{text}</span>
+                                    <span className='min-h-0' dangerouslySetInnerHTML={{ __html: text }}></span>
                                     <span className='px-[4px] py-0 text-[0.6875rem] align-middle invisible inline-flex leading-[15px] h-0'>
                                         <span className='grow-0 w-[19px] shrink-0 '></span>
                                         <span className='grow-0 shrink-0'>{time}</span>

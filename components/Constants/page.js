@@ -72,41 +72,41 @@ const Constants = {
           {
             type: 'Sent',
             time: '12:18',
-            text: 'Primary Education?',
+            text: 'Could you please list details about my <b>Primary Education</b> and any achievements during these years?',
             read: true
           },
           {
             type: 'Rec',
             time: '12:19',
             from: 'DG Khetan International School',
-            text: ' • Basic Details:\n - Academic Years --> 2007-16\n - Studied here from Junior Kindergarten upto Class 7\n - Board: Cambridge IGCSE',
+            text: ' • <u>Basic Details</u>:\n - Academic Years --> 2007-16\n - Studied here from Junior Kindergarten upto Class 7\n - Board: Cambridge IGCSE',
             nameColor: '#53bdeb'
           },
           {
             type: 'Rec',
             time: '12:19',
             from: 'DG Khetan International School',
-            text: ' • Achievements:\n - MaRRS Spell Bee International Qualifier\n - Selected for educational TV show broadcast on national television\n - Consistent school-level and region-level Olympiad topper',
+            text: ' • <u>Achievements</u>:\n - MaRRS Spell Bee International Qualifier\n - Selected for educational TV show broadcast on national television\n - Consistent school-level and region-level Olympiad topper',
             nameColor: '#53bdeb'
           },
           {
             type: 'Sent',
             time: '12:20',
-            text: 'Secondary Education?',
+            text: 'Details about my <b>Secondary Education</b> as well as accomplishments?',
             read: true
           },
           {
             type: 'Rec',
             time: '12:20',
             from: 'DG Khetan International School',
-            text: ' • Basic Details:\n - Academic Years --> 2016-19\n - Studied here (again) from Class 8 upto Class 10\n - Board: Cambridge IGCSE\n - Chosen stream in middle school : Science (with Business Studies & ICT)',
+            text: ' • <u>Basic Details</u>:\n - Academic Years --> 2016-19\n - Studied here (again) from Class 8 upto Class 10\n - Board: Cambridge IGCSE\n - Chosen stream in middle school : Science (with Business Studies & ICT)',
             nameColor: '#53bdeb'
           },
           {
             type: 'Rec',
             time: '12:20',
             from: 'DG Khetan International School',
-            text: ' • Achievements:\n - Student Council Educational Head\n - Student of the Year in Class 9\n - Cambridge IGCSE Mathematics World Topper\n - Stood 2nd in the school in Class 10 (8 A*)',
+            text: ' • <u>Achievements</u>:\n - Student Council Educational Head\n - Student of the Year in Class 9\n - Cambridge IGCSE Mathematics World Topper\n - Stood 2nd in the school in Class 10 (8 A*)',
             nameColor: '#53bdeb'
           },
           {
@@ -116,34 +116,46 @@ const Constants = {
           {
             type: 'Sent',
             time: '12:21',
-            text: 'High School?',
+            text: 'Information about my <b>High School</b> years?',
             read: true
           },
           {
             type: 'Rec',
             time: '12:21',
             from: 'TP Bhatia College of Science',
-            text: ' • Basic Details:\n - Academic Years --> 2019-21\n - High school studies completed here\n - Board: Maharashtra Board (HSC)\n - Chosen stream and elective : Engineering (Science) + Electrical Maintenance (Elective)',
+            text: ' • <u>Basic Details</u>:\n - Academic Years --> 2019-21\n - High school studies completed here\n - Board: Maharashtra Board (HSC)\n - Chosen stream and elective : Engineering (Science) + Electrical Maintenance (Elective)',
             nameColor: '#53bdeb'
           },
           {
             type: 'Rec',
             time: '12:21',
             from: 'TP Bhatia College of Science',
-            text: ' • Achievements:\n - Student Council Educational Head\n - Student of the Year in Class 9\n - Cambridge IGCSE Mathematics World Topper\n - Stood 2nd in the school in Class 10 (8 A*)',
+            text: ' • <u>Achievements</u>:\n - 94.4%ile in JEE Mains\n - 98.14%ile in MHT-CET\n - College-wide Topper (11+12)',
             nameColor: '#53bdeb'
           },
           {
-            type: 'Sent',
-            time: '12:18',
-            text: 'Some person has come',
-            read: true
+            type: 'Dates',
+            date: 'TODAY'
           },
           {
             type: 'Sent',
-            time: '12:18',
-            text: 'Lessssgooo!',
+            time: '12:21',
+            text: 'How is my <b>Undergraduation</b> going?',
             read: true
+          },
+          {
+            type: 'Rec',
+            time: '12:21',
+            from: 'KJ Somaiya College of Engineering',
+            text: ' • <u>Basic Details</u>:\n - Academic Years --> 2021-25\n - Undergoing B.Tech course here\n - Chosen stream and honors course : Computer Engineering + Cybersecurity (Honors)',
+            nameColor: '#53bdeb'
+          },
+          {
+            type: 'Rec',
+            time: '12:21',
+            from: 'KJ Somaiya College of Engineering',
+            text: ' • <u>Achievements</u>:\n - Consistent semester topper (9.92 CGPA avg)\n - Inter-collegiate Mathematics League winner in FY\n - TEDxSomaiya Tech Committee member since FY\n - Undertook multiple internship projects under University professors',
+            nameColor: '#53bdeb'
           },
         ]
       },
