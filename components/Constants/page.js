@@ -67,7 +67,7 @@ const Constants = {
         messages: [
           {
             type: 'Dates',
-            date: 'JUNE 2019'
+            date: 'June 2019'
           },
           {
             type: 'Sent',
@@ -111,7 +111,7 @@ const Constants = {
           },
           {
             type: 'Dates',
-            date: 'JUNE 2021'
+            date: 'June 2021'
           },
           {
             type: 'Sent',
@@ -135,7 +135,7 @@ const Constants = {
           },
           {
             type: 'Dates',
-            date: 'TODAY'
+            date: 'Today'
           },
           {
             type: 'Sent',
